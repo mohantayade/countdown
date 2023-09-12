@@ -1,4 +1,4 @@
-const endDate = "13 sep 2023 10:00 PM";
+const endDate = "12 sep 2023 04:17 PM";
 
 
 document.getElementById("end-date").innerText = endDate;
@@ -7,6 +7,7 @@ function clock(){
     const end = new Date(endDate);
     const now = new Date();
    const diff = (end - now)/1000;
+   if(diff < 0)return;
 //    convert in to days 
  inputs[0].value = Math.floor(diff/ 3600 / 24)
  inputs[1].value = Math.floor((diff/ 3600) % 24)
